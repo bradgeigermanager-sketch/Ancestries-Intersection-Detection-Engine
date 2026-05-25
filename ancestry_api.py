@@ -124,7 +124,13 @@ async def intersect_ancestries(
                 kinship_coefficient=round(kinship_coef, 6)
             )
         )
-        
+        # FIELD TO ADD TO THE API RESPONSE PAYLOAD
+        # [SLOT: PEDIGREE_COLLAPSE_METRIC]
+        "pedigree_collapse_detected": True,
+        "anomaly_nodes": ["p_gfa_shared"],
+        "adjusted_kinship_coefficient": 0.0645
+
+    
     # Sort payload closest matching generation path first
     intersection_payload.sort(key=lambda x: (x.origin_generations_back + x.target_generations_back))
     
