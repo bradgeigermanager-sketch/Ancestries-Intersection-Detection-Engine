@@ -32,3 +32,6 @@ class PersonNode(Base):
     father = relationship("PersonNode", remote_side=[person_id], foreign_keys=[father_id])
     mother = relationship("PersonNode", remote_side=[person_id], foreign_keys=[mother_id])
   
+    # Add to PersonNode class
+    y_haplogroup = Column(String(30), nullable=True)   # e.g., "R1b-M269"
+    mt_haplogroup = Column(String(30), nullable=True)  # e.g., "H1"
