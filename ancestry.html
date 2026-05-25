@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ancestries Intersection Console</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen p-8 font-sans">
+
+    <div class="max-w-4xl mx-auto space-y-6">
+        
+        <header class="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-2xl flex justify-between items-center">
+            <div class="space-y-1">
+                <h1 class="text-xs font-bold tracking-widest text-emerald-400 uppercase">Lineage Cross-Section Report</h1>
+                <div class="text-xl font-bold tracking-tight">Ancestries Intersection Detection Engine</div>
+            </div>
+            <div class="text-right">
+                <span class="px-3 py-1 bg-emerald-950 text-emerald-400 border border-emerald-800 rounded-full font-mono text-xs font-semibold">
+                    DAG Verified
+                </span>
+            </div>
+        </header>
+
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-slate-900 border border-slate-800 rounded-lg p-5">
+                <div class="text-xs font-medium uppercase text-slate-400 tracking-wider">Closest Match Type</div>
+                <div class="text-lg font-bold text-white mt-1">First Cousins</div>
+            </div>
+            <div class="bg-slate-900 border border-slate-800 rounded-lg p-5">
+                <div class="text-xs font-medium uppercase text-slate-400 tracking-wider">Intersecting Root Nodes</div>
+                <div class="text-2xl font-mono font-bold text-emerald-400 mt-1">1</div>
+            </div>
+            <div class="bg-slate-900 border border-slate-800 rounded-lg p-5">
+                <div class="text-xs font-medium uppercase text-slate-400 tracking-wider">Kinship Coefficient (F)</div>
+                <div class="text-2xl font-mono font-bold text-sky-400 mt-1">0.062500</div>
+            </div>
+        </section>
+
+        <main class="bg-slate-900 border border-slate-800 rounded-xl shadow-xl overflow-hidden">
+            <div class="px-6 py-4 bg-slate-850 border-b border-slate-800 flex justify-between items-center">
+                <h2 class="text-xs font-bold uppercase tracking-wider text-slate-300">Isolated Common Lineage Overlaps</h2>
+                <span class="text-[11px] text-slate-500 font-mono">Generational Depth Cap: 8</span>
+            </div>
+
+            <div class="divide-y divide-slate-800">
+                <div class="p-6 flex flex-col md:flex-row md:items-center justify-between gap-6 hover:bg-slate-850/50 transition-colors">
+                    
+                    <div class="space-y-1">
+                        <h3 class="text-lg font-bold text-white tracking-wide">George Root</h3>
+                        <p class="text-xs text-slate-400 font-medium">Born 1930 in Ohio</p>
+                        <p class="text-[11px] text-slate-600 font-mono">ID: p_gfa_shared</p>
+                    </div>
+
+                    <div class="flex items-center gap-8 bg-slate-950 px-4 py-3 rounded-lg border border-slate-800 font-mono text-xs">
+                        <div class="text-center">
+                            <div class="text-slate-500 text-[10px] uppercase font-bold tracking-wider mb-1">Your Tree</div>
+                            <div class="text-white font-bold text-sm">2 Gens <span class="text-slate-500 text-xs">(Grandfather)</span></div>
+                        </div>
+                        <div class="text-slate-700 text-lg font-bold">&larr;&rarr;</div>
+                        <div class="text-center">
+                            <div class="text-slate-500 text-[10px] uppercase font-bold tracking-wider mb-1">Their Tree</div>
+                            <div class="text-white font-bold text-sm">2 Gens <span class="text-slate-500 text-xs">(Grandfather)</span></div>
+                        </div>
+                    </div>
+
+                    <div class="text-right">
+                        <span class="text-[10px] font-bold uppercase text-slate-500 block tracking-wider">Path Contribution</span>
+                        <span class="text-xl font-mono font-bold text-emerald-400">6.25%</span>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+</body>
+</html>
+
